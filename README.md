@@ -2,19 +2,22 @@
 Simple example using vtk.js with Angular
 # Using vtk.js with Angular
 
-This is a quicktart tutorial for using vtk.js with Angular.
+This is a quick start tutorial for using vtk.js with Angular.
 ## Initialize your project
-Angular documentation for getting started can be found at `http://angular.io/guide/setup-local`
-Follow the instructions to install global angular  commandline interface @angu
+Angular documentation for getting started can be found at [http://angular.io/guide/setup-local](http://angular.io/guide/setup-local)
+Install the angular cli (the `ng` command).
+```
+$ npm i -g @angular/cli
+```
 Create an empty directory, say  `my-vtkjs-app`.
 
-```angular2html
-cd my-vtkjs-app 
-ng new // respond to the prompts
-cd vtk-cone // assuming you responded wit vtk-cone for the workspace name
-npm i @kitware/vtk.js
-npm i @angular-builders/custom-webpack // this allows us to customize webpack for vtk.js support
-ng generate component components/cone-view
+```
+$ cd my-vtkjs-app 
+$ ng new // respond to the prompts
+$ cd vtk-cone // assuming you responded wit vtk-cone for the workspace name
+$ npm i @kitware/vtk.js
+$ npm i @angular-builders/custom-webpack // this allows us to customize webpack for vtk.js support
+$ ng generate component components/cone-view
 
 ```
 
