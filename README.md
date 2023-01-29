@@ -175,3 +175,9 @@ export class ConeViewComponent implements AfterViewInit
   height: 200px;
 }
 ```
+## Running using Angular's Development Environment
+```
+$ ng serve
+
+```
+Go to url: `http://localhost:4200` to see the web page.
