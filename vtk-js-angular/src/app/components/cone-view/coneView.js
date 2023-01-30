@@ -1,4 +1,8 @@
+// Copyright (c) 2023 John Skinner
+// All rights reserved.
 
+//     Redistribution and use in source and binary forms, with or without
+// modification, are permitted without any need to contact the author.
 import '@kitware/vtk.js/Rendering/Profiles/Geometry'
 import '@kitware/vtk.js/Rendering/Profiles/Volume'
 import vtkRenderWindowInteractor from "@kitware/vtk.js/Rendering/Core/RenderWindowInteractor";
