@@ -15,37 +15,11 @@ import vtkRenderWindow from "@kitware/vtk.js/Rendering/Core/RenderWindow";
 import vtkRenderer from '@kitware/vtk.js/Rendering/Core/Renderer';
 export class ConeView
 {
-  constructor()
-  {
-  }
-  getPixDims(dimPix)
-  {
-    if (dimPix.endsWith('px'))
-    {
-      const numPart=dimPix.substring(0,dimPix.length-2);
-      return Number(numPart);
-    }
-    else
-    {
-      return 0;
-    }
-  }
+
   Initialize(Div)
   {
-    // Read the dimensions from the style which is allocated using the 'px' suffix
-
-    let sw=this.getPixDims(Div.style.width);
-    let sh = this.getPixDims(Div.style.height);
-    if ((sw=== 0) || (sh === 0))
-    {
       this.windowWidth=Div.clientWidth;
       this.windowHeight=Div.clientHeight;
-    }
-    else
-    {
-      this.windowWidth=sw;
-      this.windowHeight=sh;
-    }
     try
     {
       this.vtkRenderWindow = vtkRenderWindow.newInstance();
@@ -55,7 +29,7 @@ export class ConeView
       console.error('vtkrenderWindow newInstance error');
     }
 
-    let initialValues = {background:[0,0,0]};
+    const initialValues = {background:[0,0,0]};
     this.openglRenderWindow = vtkOpenGLRenderWindow.newInstance(initialValues);
     this.openglRenderWindow.setContainer(Div);
     this.openglRenderWindow.setSize(this.windowWidth,this.windowHeight);
